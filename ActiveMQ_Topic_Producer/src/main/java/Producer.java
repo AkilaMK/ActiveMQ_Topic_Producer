@@ -33,12 +33,12 @@ public class Producer {
 			
 			Session session = topicConnection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
-			Topic topic = session.createTopic("topic");
+			Topic topic = session.createTopic(topicName);
 
 			MessageProducer producer = session.createProducer(topic);
 
 			TextMessage message = session.createTextMessage();
-			message.setText("HELLO JMS WORLD");
+			message.setText("Hello World !");
 			
 			ObjectMessage objMessage = session.createObjectMessage();
 			objMessage.setObject((Serializable) new String("Seria"));
@@ -54,7 +54,7 @@ public class Producer {
 			topicConnection.close();
 			
 		} catch (Exception e) {
-
+			e.printStackTrace();
 		}
 	}
 }
