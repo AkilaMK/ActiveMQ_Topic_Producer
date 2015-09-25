@@ -4,4 +4,26 @@
   <artifactId>ActiveMQ_Topic_Producer</artifactId>
   <version>0.0.1</version>
   <name>ActiveMQ_Topic_Producer</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>5.10.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+			<plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-compiler-plugin</artifactId>
+			  <configuration>
+			    <source>1.7</source>
+			    <target>1.7</target>
+			  </configuration>
+			</plugin>
+        </plugins>
+    </build>
+  
 </project>
